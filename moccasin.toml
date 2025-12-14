@@ -10,7 +10,9 @@ is_zksync = false
 url = "http://127.0.0.1:8545"
 prompt_live = false
 save_to_db = false
-chain_id = 31337
+default_account_name = "anvil1"
+unsafe_password_file = "~/.moccasin/unsafe_password_file/anvil2"
+# chain_id = 31337
 
 [networks.sepolia]
 url = "https://ethereum-sepolia-rpc.publicnode.com"
