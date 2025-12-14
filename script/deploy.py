@@ -1,9 +1,10 @@
 from src import favorites
+from moccasin.boa_tools import VyperContract
 
-def deploy_favorites():
+def deploy_favorites() -> VyperContract:
     print("Deploying the application...")
-    favorites_contract = favorites.deploy()
-    starting_number = favorites_contract.retrieve()
+    favorites_contract: VyperContract = favorites.deploy()
+    starting_number: int = favorites_contract.retrieve()
     print(f"Favorites contract deployed at {favorites_contract.address} with starting number {starting_number}.")
     print("Deployment complete.")
     return favorites_contract
